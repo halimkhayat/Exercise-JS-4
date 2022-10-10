@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      // var sum = 0;
+      // for(i = 0; i < 10; i++){
+      //   sum = sum + 1;
+      //   document.write("the iteration number is " + i + "<br>")
+      // }
+
+      // var name = prompt("What is your name?");
+      // for( var i = 0; i < name.length; i++){
+      //   document.write(name.charAt(i) + "<br>");
+      // }
+
+
+
+
+      document.write("<table width='40%' border='1'>");
+      var thename = "";
+      var score = "";
+      document.write('<tr><td>Name</td><td>score</td></tr>');
+
+      for (var i = 0; i <= 5; i++) {
+        thename = prompt("enter the student name:");
+        score = prompt("enter the student score:");
+        document.write("<tr><td>" + thename[i] + "</td><td>" + score[i] + "</td></tr>");
+        i++;
+
+      } document.write('</table>')
+      function setup()
+      {
+       	cells = new Array([document.getElementById("cell00"),document.getElementById("cell01"),
+      		document.getElementById("cell02")],[document.getElementById("cell10"),
+      		document.getElementById("cell11"), document.getElementById("cell12")],
+      		[document.getElementById("cell20"),document.getElementById("cell21"),
+      		document.getElementById("cell22")] );
+      	placeValues();
+      }
+      // function to place values in cells
+      function placeValues()
+      {
+      	for ( rows = 0; rows < 5; rows++ )
+      	{
+      		for ( var cols = 0; cols< 5; cols++ )
+      		{
+      		 	cells[rows][cols].innerHTML = prompt("Enter a name/value:");
+      		}
+      	}
+      }
+    </script>
+    <style media="screen">
+      table { border: solid #4f81bd; }
+      body { margin: 10ex; color: #4f81bd; font-weight: bold; }
+      td {
+        font-size: 18px; color: #4f81bd; font-weight: bold; margin: 10%;
+        padding: 5px; line-height: 120%; width: 75pt; height: 25pt;
+        text-align: center;
+    }
+    </style>
+  </head>
+  <body onload="setup()">
+    <h1>name & score</h1>
+    <table id = "myTable" border = "1">
+    <tr>
+       	  <td> <span id = "cell00" />cell 00 </td>
+    	   <td> <span id = "cell01" />cell 01 </td>
+
+    </tr>
+    <tr>
+    	   <td> <span id = "cell10" />cell 10 </td>
+    	   <td> <span id = "cell11" />cell 11 </td>
+
+    </tr>
+    <tr>
+    	   <td> <span id = "cell10" />cell 10 </td>
+    	   <td> <span id = "cell11" />cell 11 </td>
+
+    </tr>
+    <tr>
+    	   <td> <span id = "cell10" />cell 10 </td>
+    	   <td> <span id = "cell11" />cell 11 </td>
+
+    </tr>
+    <tr>
+    	   <td> <span id = "cell10" />cell 10 </td>
+    	   <td> <span id = "cell11" />cell 11 </td>
+    </tr>
+
+    </table>
+  </body>
+</html>
